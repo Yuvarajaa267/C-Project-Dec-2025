@@ -2,6 +2,7 @@
 #include<string.h>
 #include<conio.h>
 #include<stdlib.h>
+void door();
 //using typedef allows us to use the structure name without  the keyword 'struct'.
 typedef struct 
 {
@@ -53,6 +54,7 @@ while (fscanf(file, "%49[^,],%d,%c,%f", s[i].name, &s[i].code, &s[i].door, &s[i]
         return 1;
     if(entry>exit)  
     {
+        door();
         for()
     }
 
@@ -64,4 +66,25 @@ while (fscanf(file, "%49[^,],%d,%c,%f", s[i].name, &s[i].code, &s[i].door, &s[i]
         printf("The Entered Station Codes are invalid");
     fclose(file);
     return 0;
+}
+void door()
+{
+    for (int i = 0; i < 20; i++)
+    {
+        if ((i % 2) == 0)
+            printf(" Doors are opening ");
+        else
+            printf("!Doors are opening!");
+        sleep(200);
+        system("cls");
+    }
+    for (int i = 0; i < 15; i++)
+    {
+        if ((i % 2) == 0)
+            printf(" Please mind the gap ");
+        else
+            printf("!Please mind the gap!");
+        sleep(1000);
+        system("cls");
+    }
 }
