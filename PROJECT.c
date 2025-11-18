@@ -53,7 +53,7 @@ while (fscanf(file, "%49[^,],%d,%c,%f", s[i].name, &s[i].code, &s[i].door, &s[i]
         return 1;
     if(entry>exit)  
     {
-        for()
+        for(int i)
     }
 
     else if(exit>entry){
